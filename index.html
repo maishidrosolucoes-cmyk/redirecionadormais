@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="pt-pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portal Corporativo</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Lucide Icons CDN -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <style>
+        /* Estilos personalizados para transições suaves de altura (Accordion) */
+        .accordion-content {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s ease-in-out, opacity 0.3s ease-in-out;
+            opacity: 0;
+        }
+        .accordion-content.open {
+            max-height: 500px; /* Valor alto o suficiente para o conteúdo */
+            opacity: 1;
+        }
+        .rotate-180 {
+            transform: rotate(180deg);
+        }
+    </style>
+</head>
+<body class="min-h-screen bg-white flex flex-col items-center py-8 px-4 sm:px-6 font-sans text-[#0B1521]">
+
+    <!-- Container principal (Estilo Linktree) -->
+    <div class="w-full max-w-md flex flex-col items-center">
+        
+        <!-- Botão Entrar -->
+        <div class="w-full flex justify-end mb-6">
+            <button class="flex items-center gap-2 text-sm font-semibold text-gray-500 hover:text-[#0B1521] transition-colors focus:outline-none">
+                <i data-lucide="log-in" class="w-4 h-4"></i>
+                <span>entrar</span>
+            </button>
+        </div>
+
+        <!-- Cabeçalho: Logótipo -->
+        <div class="mb-8 w-full flex justify-center">
+            <img 
+              src="https://res.cloudinary.com/dbnyxxhe3/image/upload/v1772102800/02_Prancheta_1_ksm9oj.png" 
+              alt="Logótipo da Empresa" 
+              class="w-48 h-48 sm:w-56 sm:h-56 object-contain"
+              onerror="this.onerror=null; this.src='https://via.placeholder.com/200?text=Logo'"
+            />
+        </div>
+
+        <!-- Ícones de Destaque Redondos -->
+        <div class="flex gap-4 sm:gap-8 mb-10 items-start">
+            <!-- Missão, Visão e Valores -->
+            <a href="#" class="flex flex-col items-center gap-2 group cursor-pointer w-24">
+                <div class="w-14 h-14 rounded-full bg-transparent flex items-center justify-center text-[#0B1521] group-hover:bg-[#F0F4F8] group-hover:scale-110 transition-all duration-300">
+                    <i data-lucide="target" class="w-7 h-7 stroke-[1.5] group-hover:text-blue-600 transition-colors duration-300"></i>
+                </div>
+                <div class="flex flex-col items-center text-center">
+                    <span class="text-[9px] font-bold text-gray-500 uppercase tracking-tight group-hover:text-[#0B1521] transition-colors duration-300 leading-tight">
+                        Missão, Visão
+                    </span>
+                    <span class="text-[9px] font-bold text-gray-500 uppercase tracking-tight group-hover:text-[#0B1521] transition-colors duration-300 leading-tight">
+                        e Valores
+                    </span>
+                </div>
+            </a>
+
+            <!-- Calendário -->
+            <a href="#" class="flex flex-col items-center gap-2 group cursor-pointer w-24">
+                <div class="w-14 h-14 rounded-full bg-transparent flex items-center justify-center text-[#0B1521] group-hover:bg-[#F0F4F8] group-hover:scale-110 transition-all duration-300">
+                    <i data-lucide="calendar" class="w-7 h-7 stroke-[1.5] group-hover:text-blue-600 transition-colors duration-300"></i>
+                </div>
+                <span class="text-[9px] font-bold text-gray-500 uppercase tracking-tight group-hover:text-[#0B1521] transition-colors duration-300 mt-0.5">
+                    Calendário
+                </span>
+            </a>
+
+            <!-- Código de Conduta -->
+            <a href="#" class="flex flex-col items-center gap-2 group cursor-pointer w-24">
+                <div class="w-14 h-14 rounded-full bg-transparent flex items-center justify-center text-[#0B1521] group-hover:bg-[#F0F4F8] group-hover:scale-110 transition-all duration-300">
+                    <i data-lucide="file-text" class="w-7 h-7 stroke-[1.5] group-hover:text-blue-600 transition-colors duration-300"></i>
+                </div>
+                <div class="flex flex-col items-center text-center">
+                    <span class="text-[9px] font-bold text-gray-500 uppercase tracking-tight group-hover:text-[#0B1521] transition-colors duration-300 leading-tight">
+                        Código de
+                    </span>
+                    <span class="text-[9px] font-bold text-gray-500 uppercase tracking-tight group-hover:text-[#0B1521] transition-colors duration-300 leading-tight">
+                        Conduta
+                    </span>
+                </div>
+            </a>
+        </div>
+
+        <!-- Divisor de Categoria -->
+        <div class="w-full flex items-center mb-5">
+            <span class="text-[11px] font-bold text-gray-400 uppercase tracking-widest mr-3">
+                DEPARTAMENTOS
+            </span>
+            <div class="flex-grow h-[1px] bg-gray-200"></div>
+        </div>
+
+        <!-- Lista de Botões (Acordeão) -->
+        <div id="accordion-container" class="w-full space-y-3">
+            <!-- Os itens serão gerados pelo script para manter a estrutura de dados limpa -->
+        </div>
+
+    </div>
+
+    <script>
+        // 1. ESTRUTURA DE DADOS (Exatamente igual ao React)
+        const menuItems = [
+            {
+                id: 1,
+                title: "1. Governança e Direção",
+                links: [
+                    { label: "1.1 - Organograma e Responsabilidades", url: "#" },
+                    { label: "1.2 - Políticas corporativas", url: "#" }
+                ]
+            },
+            {
+                id: 2,
+                title: "2. Administrativo",
+                links: [
+                    { label: "2.1 - Financeiro", url: "#" },
+                    { label: "2.2 - RH", url: "#" },
+                    { label: "2.3 - Documentação", url: "#" },
+                    { label: "2.4 - Processos, pop e qualidade", url: "#" }
+                ]
+            },
+            {
+                id: 3,
+                title: "3. Comercial e Unidade de negócio",
+                links: [
+                    { label: "3.1 - Propostas", url: "#" },
+                    { label: "3.2 - Marketing e Desenvolvimento", url: "#" },
+                    { label: "3.3 - Portfólio comercial", url: "#" }
+                ]
+            },
+            {
+                id: 4,
+                title: "4. Projeto engenharia e PDI",
+                links: [
+                    { label: "Acesso aos Projetos", url: "#" }
+                ]
+            },
+            {
+                id: 5,
+                title: "5. Produção",
+                links: [
+                    { label: "5.1 - Equipamentos e sistemas", url: "#" },
+                    { label: "5.2 - Serviço e manutenção", url: "#" },
+                    { label: "5.3 - Garantias", url: "#" }
+                ]
+            }
+        ];
+
+        // 2. LÓGICA DE RENDERIZAÇÃO
+        const container = document.getElementById('accordion-container');
+
+        function renderMenu() {
+            container.innerHTML = menuItems.map(item => `
+                <div class="w-full accordion-item" id="item-${item.id}">
+                    <button 
+                        onclick="toggleSection(${item.id})"
+                        class="accordion-button w-full px-5 py-4 text-left flex justify-between items-center rounded-xl bg-[#0B1521] text-white hover:bg-[#1C2938] transition-all duration-300 focus:outline-none"
+                    >
+                        <span class="font-bold text-[15px] tracking-wide">${item.title}</span>
+                        <i data-lucide="chevron-down" class="w-5 h-5 text-gray-400 transition-transform duration-300"></i>
+                    </button>
+                    <div class="accordion-content bg-[#F8FAFC] border-x border-b border-gray-200 rounded-b-xl shadow-inner">
+                        <div class="flex flex-col p-2">
+                            ${item.links.map(link => `
+                                <a href="${link.url}" class="flex items-center justify-between p-3 rounded-lg text-sm font-semibold text-gray-600 hover:bg-[#0B1521] hover:text-white transition-colors group">
+                                    <span class="ml-2">${link.label}</span>
+                                    <i data-lucide="external-link" class="w-4 h-4 opacity-0 group-hover:opacity-100 transition-opacity"></i>
+                                </a>
+                            `).join('')}
+                        </div>
+                    </div>
+                </div>
+            `).join('');
+            
+            // Inicializar ícones do Lucide
+            lucide.createIcons();
+        }
+
+        // 3. LÓGICA DE CONTROLO (Toggle)
+        let openId = null;
+
+        window.toggleSection = function(id) {
+            const items = document.querySelectorAll('.accordion-item');
+            
+            items.forEach(item => {
+                const itemId = parseInt(item.id.replace('item-', ''));
+                const content = item.querySelector('.accordion-content');
+                const btn = item.querySelector('.accordion-button');
+                const icon = btn.querySelector('[data-lucide="chevron-down"]');
+
+                if (itemId === id && openId !== id) {
+                    content.classList.add('open');
+                    btn.classList.add('rounded-b-none', 'bg-[#1C2938]');
+                    if(icon) icon.classList.add('rotate-180');
+                } else {
+                    content.classList.remove('open');
+                    btn.classList.remove('rounded-b-none', 'bg-[#1C2938]');
+                    if(icon) icon.classList.remove('rotate-180');
+                }
+            });
+
+            openId = (openId === id) ? null : id;
+        };
+
+        // Iniciar aplicação
+        renderMenu();
+    </script>
+</body>
+</html>
