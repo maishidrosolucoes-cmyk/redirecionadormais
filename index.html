@@ -32,10 +32,11 @@
         
         <!-- Botão Entrar -->
         <div class="w-full flex justify-end mb-6">
-            <button class="flex items-center gap-2 text-sm font-semibold text-gray-500 hover:text-[#0B1521] transition-colors focus:outline-none">
+            <!-- COLOQUE O LINK DO LOGIN ABAIXO NO href -->
+            <a href="LINK_PARA_LOGIN_AQUI" class="flex items-center gap-2 text-sm font-semibold text-gray-500 hover:text-[#0B1521] transition-colors focus:outline-none">
                 <i data-lucide="log-in" class="w-4 h-4"></i>
                 <span>entrar</span>
-            </button>
+            </a>
         </div>
 
         <!-- Cabeçalho: Logótipo -->
@@ -51,7 +52,8 @@
         <!-- Ícones de Destaque Redondos -->
         <div class="flex gap-4 sm:gap-8 mb-10 items-start">
             <!-- Missão, Visão e Valores -->
-            <a href="#" class="flex flex-col items-center gap-2 group cursor-pointer w-24">
+            <!-- COLOQUE O LINK DE MVV ABAIXO NO href -->
+            <a href="https://maishidrosolucoes-cmyk.github.io/c-digo-de-conduta/" class="flex flex-col items-center gap-2 group cursor-pointer w-24">
                 <div class="w-14 h-14 rounded-full bg-transparent flex items-center justify-center text-[#0B1521] group-hover:bg-[#F0F4F8] group-hover:scale-110 transition-all duration-300">
                     <i data-lucide="target" class="w-7 h-7 stroke-[1.5] group-hover:text-blue-600 transition-colors duration-300"></i>
                 </div>
@@ -66,7 +68,8 @@
             </a>
 
             <!-- Calendário -->
-            <a href="#" class="flex flex-col items-center gap-2 group cursor-pointer w-24">
+            <!-- COLOQUE O LINK DO CALENDÁRIO ABAIXO NO href -->
+            <a href="LINK_PARA_CALENDARIO_AQUI" class="flex flex-col items-center gap-2 group cursor-pointer w-24">
                 <div class="w-14 h-14 rounded-full bg-transparent flex items-center justify-center text-[#0B1521] group-hover:bg-[#F0F4F8] group-hover:scale-110 transition-all duration-300">
                     <i data-lucide="calendar" class="w-7 h-7 stroke-[1.5] group-hover:text-blue-600 transition-colors duration-300"></i>
                 </div>
@@ -76,7 +79,8 @@
             </a>
 
             <!-- Código de Conduta -->
-            <a href="#" class="flex flex-col items-center gap-2 group cursor-pointer w-24">
+            <!-- COLOQUE O LINK DO CÓDIGO DE CONDUTA ABAIXO NO href -->
+            <a href="LINK_PARA_CONDUTA_AQUI" class="flex flex-col items-center gap-2 group cursor-pointer w-24">
                 <div class="w-14 h-14 rounded-full bg-transparent flex items-center justify-center text-[#0B1521] group-hover:bg-[#F0F4F8] group-hover:scale-110 transition-all duration-300">
                     <i data-lucide="file-text" class="w-7 h-7 stroke-[1.5] group-hover:text-blue-600 transition-colors duration-300"></i>
                 </div>
@@ -101,55 +105,56 @@
 
         <!-- Lista de Botões (Acordeão) -->
         <div id="accordion-container" class="w-full space-y-3">
-            <!-- Os itens serão gerados pelo script para manter a estrutura de dados limpa -->
+            <!-- Os itens serão gerados pelo script -->
         </div>
 
     </div>
 
     <script>
-        // 1. ESTRUTURA DE DADOS (Exatamente igual ao React)
+        // 1. ESTRUTURA DE DADOS
+        // Para cada link abaixo, substitua o "#" pelo URL real da página.
         const menuItems = [
             {
                 id: 1,
                 title: "1. Governança e Direção",
                 links: [
-                    { label: "1.1 - Organograma e Responsabilidades", url: "#" },
-                    { label: "1.2 - Políticas corporativas", url: "#" }
+                    { label: "1.1 - Organograma e Responsabilidades", url: "LINK_AQUI" },
+                    { label: "1.2 - Políticas corporativas", url: "LINK_AQUI" }
                 ]
             },
             {
                 id: 2,
                 title: "2. Administrativo",
                 links: [
-                    { label: "2.1 - Financeiro", url: "#" },
-                    { label: "2.2 - RH", url: "#" },
-                    { label: "2.3 - Documentação", url: "#" },
-                    { label: "2.4 - Processos, pop e qualidade", url: "#" }
+                    { label: "2.1 - Financeiro", url: "LINK_AQUI" },
+                    { label: "2.2 - RH", url: "LINK_AQUI" },
+                    { label: "2.3 - Documentação", url: "LINK_AQUI" },
+                    { label: "2.4 - Processos, pop e qualidade", url: "LINK_AQUI" }
                 ]
             },
             {
                 id: 3,
                 title: "3. Comercial e Unidade de negócio",
                 links: [
-                    { label: "3.1 - Propostas", url: "#" },
-                    { label: "3.2 - Marketing e Desenvolvimento", url: "#" },
-                    { label: "3.3 - Portfólio comercial", url: "#" }
+                    { label: "3.1 - Propostas", url: "LINK_AQUI" },
+                    { label: "3.2 - Marketing e Desenvolvimento", url: "LINK_AQUI" },
+                    { label: "3.3 - Portfólio comercial", url: "LINK_AQUI" }
                 ]
             },
             {
                 id: 4,
                 title: "4. Projeto engenharia e PDI",
                 links: [
-                    { label: "Acesso aos Projetos", url: "#" }
+                    { label: "Acesso aos Projetos", url: "LINK_AQUI" }
                 ]
             },
             {
                 id: 5,
                 title: "5. Produção",
                 links: [
-                    { label: "5.1 - Equipamentos e sistemas", url: "#" },
-                    { label: "5.2 - Serviço e manutenção", url: "#" },
-                    { label: "5.3 - Garantias", url: "#" }
+                    { label: "5.1 - Equipamentos e sistemas", url: "LINK_AQUI" },
+                    { label: "5.2 - Serviço e manutenção", url: "LINK_AQUI" },
+                    { label: "5.3 - Garantias", url: "LINK_AQUI" }
                 ]
             }
         ];
@@ -180,7 +185,6 @@
                 </div>
             `).join('');
             
-            // Inicializar ícones do Lucide
             lucide.createIcons();
         }
 
@@ -210,7 +214,6 @@
             openId = (openId === id) ? null : id;
         };
 
-        // Iniciar aplicação
         renderMenu();
     </script>
 </body>
