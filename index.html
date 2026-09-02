@@ -49,50 +49,85 @@
             />
         </div>
 
-        <!-- Ícones de Destaque Redondos -->
-        <div class="flex gap-4 sm:gap-8 mb-10 items-start">
-            <!-- Missão, Visão e Valores -->
-            <!-- COLOQUE O LINK DE MVV ABAIXO NO href -->
-            <a href='https://maishidrosolucoes-cmyk.github.io/Miss-o-vis-o-e-valores-/' class="flex flex-col items-center gap-2 group cursor-pointer w-24">
-                <div class="w-14 h-14 rounded-full bg-transparent flex items-center justify-center text-[#0B1521] group-hover:bg-[#F0F4F8] group-hover:scale-110 transition-all duration-300">
-                    <i data-lucide="target" class="w-7 h-7 stroke-[1.5] group-hover:text-blue-600 transition-colors duration-300"></i>
-                </div>
-                <div class="flex flex-col items-center text-center">
-                    <span class="text-[9px] font-bold text-gray-500 uppercase tracking-tight group-hover:text-[#0B1521] transition-colors duration-300 leading-tight">
-                        Missão, Visão
-                    </span>
-                    <span class="text-[9px] font-bold text-gray-500 uppercase tracking-tight group-hover:text-[#0B1521] transition-colors duration-300 leading-tight">
-                        e Valores
-                    </span>
-                </div>
-            </a>
+        <!-- Ícones de Destaque Redondos / Carrossel de Acessos Rápidos -->
+        <div id="quick-links-carousel" class="w-full mb-10 overflow-x-auto [&::-webkit-scrollbar]:hidden [-ms-overflow-style:none] [scrollbar-width:none] touch-pan-x">
+            <div id="quick-links-track" class="flex gap-4 sm:gap-8 items-start w-max min-w-full">
+                <!-- Missão, Visão e Valores -->
+                <!-- COLOQUE O LINK DE MVV ABAIXO NO href -->
+                <a href='https://maishidrosolucoes-cmyk.github.io/Miss-o-vis-o-e-valores-/' class="flex flex-col items-center gap-2 group cursor-pointer w-24 flex-shrink-0">
+                    <div class="w-14 h-14 rounded-full bg-transparent flex items-center justify-center text-[#0B1521] group-hover:bg-[#F0F4F8] group-hover:scale-110 transition-all duration-300">
+                        <i data-lucide="target" class="w-7 h-7 stroke-[1.5] group-hover:text-blue-600 transition-colors duration-300"></i>
+                    </div>
+                    <div class="flex flex-col items-center text-center">
+                        <span class="text-[9px] font-bold text-gray-500 uppercase tracking-tight group-hover:text-[#0B1521] transition-colors duration-300 leading-tight">
+                            Missão, Visão
+                        </span>
+                        <span class="text-[9px] font-bold text-gray-500 uppercase tracking-tight group-hover:text-[#0B1521] transition-colors duration-300 leading-tight">
+                            e Valores
+                        </span>
+                    </div>
+                </a>
 
-            <!-- Calendário -->
-            <!-- COLOQUE O LINK DO CALENDÁRIO ABAIXO NO href -->
-            <a href="https://maishidrosolucoes-cmyk.github.io/controle_opercional/#calendar" class="flex flex-col items-center gap-2 group cursor-pointer w-24">
-                <div class="w-14 h-14 rounded-full bg-transparent flex items-center justify-center text-[#0B1521] group-hover:bg-[#F0F4F8] group-hover:scale-110 transition-all duration-300">
-                    <i data-lucide="calendar" class="w-7 h-7 stroke-[1.5] group-hover:text-blue-600 transition-colors duration-300"></i>
-                </div>
-                <span class="text-[9px] font-bold text-gray-500 uppercase tracking-tight group-hover:text-[#0B1521] transition-colors duration-300 mt-0.5">
-                    Calendário
-                </span>
-            </a>
+                <!-- Calendário -->
+                <!-- COLOQUE O LINK DO CALENDÁRIO ABAIXO NO href -->
+                <a href="https://maishidrosolucoes-cmyk.github.io/controle_opercional/#calendar" class="flex flex-col items-center gap-2 group cursor-pointer w-24 flex-shrink-0">
+                    <div class="w-14 h-14 rounded-full bg-transparent flex items-center justify-center text-[#0B1521] group-hover:bg-[#F0F4F8] group-hover:scale-110 transition-all duration-300">
+                        <i data-lucide="calendar" class="w-7 h-7 stroke-[1.5] group-hover:text-blue-600 transition-colors duration-300"></i>
+                    </div>
+                    <span class="text-[9px] font-bold text-gray-500 uppercase tracking-tight group-hover:text-[#0B1521] transition-colors duration-300 mt-0.5">
+                        Calendário
+                    </span>
+                </a>
 
-            <!-- Código de Conduta -->
-            <!-- COLOQUE O LINK DO CÓDIGO DE CONDUTA ABAIXO NO href -->
-            <a href="https://maishidrosolucoes-cmyk.github.io/c-digo-de-conduta/" class="flex flex-col items-center gap-2 group cursor-pointer w-24">
-                <div class="w-14 h-14 rounded-full bg-transparent flex items-center justify-center text-[#0B1521] group-hover:bg-[#F0F4F8] group-hover:scale-110 transition-all duration-300">
-                    <i data-lucide="file-text" class="w-7 h-7 stroke-[1.5] group-hover:text-blue-600 transition-colors duration-300"></i>
-                </div>
-                <div class="flex flex-col items-center text-center">
-                    <span class="text-[9px] font-bold text-gray-500 uppercase tracking-tight group-hover:text-[#0B1521] transition-colors duration-300 leading-tight">
-                        Código de
+                <!-- Código de Conduta -->
+                <!-- COLOQUE O LINK DO CÓDIGO DE CONDUTA ABAIXO NO href -->
+                <a href="https://maishidrosolucoes-cmyk.github.io/c-digo-de-conduta/" class="flex flex-col items-center gap-2 group cursor-pointer w-24 flex-shrink-0">
+                    <div class="w-14 h-14 rounded-full bg-transparent flex items-center justify-center text-[#0B1521] group-hover:bg-[#F0F4F8] group-hover:scale-110 transition-all duration-300">
+                        <i data-lucide="file-text" class="w-7 h-7 stroke-[1.5] group-hover:text-blue-600 transition-colors duration-300"></i>
+                    </div>
+                    <div class="flex flex-col items-center text-center">
+                        <span class="text-[9px] font-bold text-gray-500 uppercase tracking-tight group-hover:text-[#0B1521] transition-colors duration-300 leading-tight">
+                            Código de
+                        </span>
+                        <span class="text-[9px] font-bold text-gray-500 uppercase tracking-tight group-hover:text-[#0B1521] transition-colors duration-300 leading-tight">
+                            Conduta
+                        </span>
+                    </div>
+                </a>
+
+                <!-- Tarefas -->
+                <!-- COLE O LINK DE TAREFAS NO href ABAIXO -->
+                <a href="https://maishidrosolucoes-cmyk.github.io/controle_opercional/#macro" class="flex flex-col items-center gap-2 group cursor-pointer w-24 flex-shrink-0">
+                    <div class="w-14 h-14 rounded-full bg-transparent flex items-center justify-center text-[#0B1521] group-hover:bg-[#F0F4F8] group-hover:scale-110 transition-all duration-300">
+                        <i data-lucide="list-checks" class="w-7 h-7 stroke-[1.5] group-hover:text-blue-600 transition-colors duration-300"></i>
+                    </div>
+                    <span class="text-[9px] font-bold text-gray-500 uppercase tracking-tight group-hover:text-[#0B1521] transition-colors duration-300 mt-0.5">
+                        Tarefas
                     </span>
-                    <span class="text-[9px] font-bold text-gray-500 uppercase tracking-tight group-hover:text-[#0B1521] transition-colors duration-300 leading-tight">
-                        Conduta
+                </a>
+
+                <!-- Carteira -->
+                <!-- COLE O LINK DA CARTEIRA NO href ABAIXO -->
+                <a href="https://maishidrosolucoes-cmyk.github.io/controle_opercional/#carteira" class="flex flex-col items-center gap-2 group cursor-pointer w-24 flex-shrink-0">
+                    <div class="w-14 h-14 rounded-full bg-transparent flex items-center justify-center text-[#0B1521] group-hover:bg-[#F0F4F8] group-hover:scale-110 transition-all duration-300">
+                        <i data-lucide="briefcase-business" class="w-7 h-7 stroke-[1.5] group-hover:text-blue-600 transition-colors duration-300"></i>
+                    </div>
+                    <span class="text-[9px] font-bold text-gray-500 uppercase tracking-tight group-hover:text-[#0B1521] transition-colors duration-300 mt-0.5">
+                        Carteira
                     </span>
-                </div>
-            </a>
+                </a>
+
+                <!-- Maisa / WhatsApp -->
+                <!-- COLE O LINK DO WHATSAPP DA MAISA NO href ABAIXO -->
+                <a href="https://wa.me/558582031499" class="flex flex-col items-center gap-2 group cursor-pointer w-24 flex-shrink-0">
+                    <div class="w-14 h-14 rounded-full bg-transparent flex items-center justify-center text-[#0B1521] group-hover:bg-[#F0F4F8] group-hover:scale-110 transition-all duration-300">
+                        <i data-lucide="message-circle" class="w-7 h-7 stroke-[1.5] group-hover:text-blue-600 transition-colors duration-300"></i>
+                    </div>
+                    <span class="text-[9px] font-bold text-gray-500 uppercase tracking-tight group-hover:text-[#0B1521] transition-colors duration-300 mt-0.5">
+                        Maisa
+                    </span>
+                </a>
+            </div>
         </div>
 
         <!-- Divisor de Categoria -->
@@ -118,18 +153,19 @@
                 id: 1,
                 title: "1. Governança e Direção",
                 links: [
-                    { label: "1.1 - Organograma e Responsabilidades", url: "Organograma.pdf" },
-                    { label: "1.2 - Políticas corporativas (EM CONSTUÇÃO)", url: "LINK_AQUI" }
+                    { label: "1.1 - Organograma e Responsabilidades", url: "https://maishidrosolucoes-cmyk.github.io/Organograma_mhs/#/pessoas" },
+                    { label: "1.2 - Políticas corporativas (EM CONSTRUÇÃO)", url: "LINK_AQUI" },
+                    { label: "1.3 - Gestão Patrimonial", url: "https://maishidrosolucoes-cmyk.github.io/gestao_partimonial/" }
                 ]
             },
             {
                 id: 2,
                 title: "2. Administrativo",
                 links: [
-                    { label: "2.1 - Financeiro (EM CONSTUÇÃO)", url: "LINK_AQUI" },
-                    { label: "2.2 - RH (EM CONSTUÇÃO)", url: "LINK_AQUI" },
+                    { label: "2.1 - Financeiro (EM CONSTRUÇÃO)", url: "LINK_AQUI" },
+                    { label: "2.2 - RH (EM CONSTRUÇÃO)", url: "LINK_AQUI" },
                     { label: "2.3 - Documentação", url: "https://maishidrosolucoes-cmyk.github.io/Carteira-de-documenta-o/" },
-                    { label: "2.4 - Processos, pop e qualidade (EM CONSTUÇÃO)", url: "LINK_AQUI" }
+                    { label: "2.4 - Processos, pop e qualidade (EM CONSTRUÇÃO)", url: "LINK_AQUI" }
                 ]
             },
             {
@@ -137,23 +173,24 @@
                 title: "3. Comercial e Unidade de negócio",
                 links: [
                     { label: "3.1 - Propostas", url: "https://maishidrosolucoes-cmyk.github.io/carteira/" },
-                    { label: "3.2 - Marketing e Desenvolvimento (EM CONSTUÇÃO)", url: "LINK_AQUI" },
-                    { label: "3.3 - Portfólio comercial (EM CONSTUÇÃO)", url: "LINK_AQUI" }
+                    { label: "3.2 - Marketing e Desenvolvimento (EM CONSTRUÇÃO)", url: "LINK_AQUI" },
+                    { label: "3.3 - Clientes", url: "https://maishidrosolucoes-cmyk.github.io/mapa_clientes/02_PROJETO_ATUAL/?app_version=20260902-feira-operacao20" },
+                    { label: "3.4 - Portfólio comercial", url: "https://maishidrosolucoes-cmyk.github.io/institucional/crm.html" }
                 ]
             },
             {
                 id: 4,
                 title: "4. Projeto engenharia e PDI",
                 links: [
-                    { label: "Acesso aos Projetos (EM CONSTUÇÃO)", url: "LINK_AQUI" }
+                    { label: "Acesso aos Projetos (EM CONSTRUÇÃO)", url: "LINK_AQUI" }
                 ]
             },
             {
                 id: 5,
                 title: "5. Produção",
                 links: [
-                    { label: "5.1 - Equipamentos e sistemas (EM CONSTUÇÃO)", url: "LINK_AQUI" },
-                    { label: "5.2 - Serviço e manutenção (EM CONSTUÇÃO)", url: "LINK_AQUI" },
+                    { label: "5.1 - Equipamentos e sistemas (EM CONSTRUÇÃO)", url: "LINK_AQUI" },
+                    { label: "5.2 - Serviço e manutenção (EM CONSTRUÇÃO)", url: "LINK_AQUI" },
                     { label: "5.3 - Garantias (EM CONSTUÇÃO)", url: "LINK_AQUI" }
                 ]
             }
@@ -214,7 +251,45 @@
             openId = (openId === id) ? null : id;
         };
 
+        // 4. CARROSSEL DE ACESSOS RÁPIDOS EM LOOP INFINITO
+        // Mantém a rolagem manual por touch/trackpad e reposiciona silenciosamente
+        // para a sequência continuar do último ícone de volta ao primeiro.
+        function initInfiniteQuickLinksCarousel() {
+            const carousel = document.getElementById('quick-links-carousel');
+            const track = document.getElementById('quick-links-track');
+
+            if (!carousel || !track || track.dataset.loopReady === 'true') return;
+
+            const originals = Array.from(track.children);
+            if (originals.length < 2) return;
+
+            const before = originals.map(item => item.cloneNode(true));
+            const after = originals.map(item => item.cloneNode(true));
+
+            before.reverse().forEach(item => track.insertBefore(item, track.firstChild));
+            after.forEach(item => track.appendChild(item));
+
+            track.dataset.loopReady = 'true';
+
+            requestAnimationFrame(() => {
+                const firstOriginal = track.children[originals.length];
+                const firstBefore = track.children[0];
+                const segmentWidth = firstOriginal.offsetLeft - firstBefore.offsetLeft;
+
+                carousel.scrollLeft = segmentWidth;
+
+                carousel.addEventListener('scroll', () => {
+                    if (carousel.scrollLeft < segmentWidth * 0.5) {
+                        carousel.scrollLeft += segmentWidth;
+                    } else if (carousel.scrollLeft > segmentWidth * 1.5) {
+                        carousel.scrollLeft -= segmentWidth;
+                    }
+                }, { passive: true });
+            });
+        }
+
         renderMenu();
+        initInfiniteQuickLinksCarousel();
     </script>
 </body>
 </html>
